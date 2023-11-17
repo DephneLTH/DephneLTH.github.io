@@ -1,0 +1,285 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.logo:hover {
+    width: 160px; /* Adjust the width as needed */
+    height: 160px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add some spacing between the logo and navigation items */
+    transform: rotate(45deg);
+    }
+
+nav {
+    background-color: transparent; /* Background color for the navbar */
+    display: flex; /* Make the logo and list items horizontal */
+    justify-content: space-between; /* Space out the logo and list items */
+    align-items: center; /* Center vertically within the navbar */
+    padding: 10px 20px; /* Add some padding for spacing */
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-item {
+    margin: 0;
+    padding: 0;
+}
+.navbar a {
+    text-decoration: none; /* Remove underlines from links */
+    color: black; /* Text color for the links */
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px; /* Add padding around the links */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+    margin-bottom: -20px; 
+}
+
+.navbar a:hover {
+    color: red; /* Background color for links on hover */
+}
+
+.fullscreen-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire viewport */
+    z-index: -1; /* Place the video behind other content */
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .article-box {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: calc(33.33% - 40px); /* Distribute them equally with a little margin */
+    box-sizing: border-box;
+  }
+  
+
+.article-box h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.article-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-box img:hover {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    transition: transform 0.3s ease;
+}
+
+
+/* Style the footer */
+footer {
+    background-color: black; /* Background color for the footer */
+    text-align: center; /* Center the text horizontally */
+    padding: 20px 0; /* Add padding for spacing */
+    position: fixed; /* Position the footer at the bottom of the viewport */
+    bottom: 0; /* Keep the footer at the bottom of the viewport */
+    width: 100%; /* Make the footer full width */
+}
+
+/* Style the footer box */
+.footer-box {
+    color: white; /* Text color for the footer */
+    font-size: 16px;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+    display: none; /* Initially hide the dropdown menu */
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Style the dropdown menu items */
+.dropdown-menu li {
+    display: block;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Show the dropdown menu on hover */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.7); /* 50% transparent white background */
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #333; /* Set the color to your preference */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background: #39B54A;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #2484C6;
+}
+
+    @media only screen and (max-width: 768px) {
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(Images/pexels-alesia-kozik-6016770.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .logo {
+            width: 130px;
+            height: 130px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            transform: scale(1.5);
+            margin-bottom: 20px;
+        }
+    
+        .logo:hover {
+            width: 160px;
+            height: 160px;
+            margin-right: 10px;
+            transform: rotate(45deg);
+        }
+    
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    
+        .navbar a {
+            color: black;
+            font-size: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+    
+        .navbar a:hover {
+            color: red;
+        }
+    
+        .fullscreen-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            display: none;
+        }
+    
+        .article-container {
+            display: block;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+    
+        .article-box {
+            flex: 1;
+            box-sizing: content-box;
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+    
+        .article-box h2 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+    
+        .article-box img {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        .article-box img:hover {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+    
+        .contact-form {
+            max-width: 350px;
+            margin: 25px auto;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.8);
+        }
+    }
